@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Art Beat - Test Homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="offerings-grid" style="max-width:1200px;margin:60px auto;padding:20px;font-family:'Poppins',sans-serif;color:#1A1A1A;background:#FFFFFF;">
+    <style>
+      #offerings-grid .grid {
+        display:grid;
+        gap:26px;
+        grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+        justify-content:center;
+        align-items:stretch;
+      }
+      #offerings-grid .card {
+        border-radius:24px;
+        padding:32px;
+        background:var(--card-bg,#FFF2C5);
+        box-shadow:0 6px 20px rgba(0,0,0,.08);
+        text-decoration:none;
+        color:#1A1A1A;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        transition:transform .15s ease, box-shadow .15s ease;
+      }
+      #offerings-grid .card:hover {
+        transform:translateY(-4px);
+        box-shadow:0 10px 30px rgba(0,0,0,.12);
+      }
+      #offerings-grid .card h3 {
+        font-size:1.4rem;
+        margin-bottom:10px;
+        font-weight:700;
+      }
+      #offerings-grid .card p {
+        line-height:1.5;
+        font-size:1rem;
+        margin-bottom:16px;
+      }
+      #offerings-grid .card .link {
+        font-weight:600;
+        text-decoration:underline;
+      }
+    </style>
+    <div class="grid">
+      <a class="card" style="background:#FFF2C5;" href="https://www.artbeatstudio.co/classes">
+        <h3>Classes</h3>
+        <p>Creative art and pottery classes for all ages — from toddlers to adults. Includes after-school, weekend, and specialty sessions.</p>
+        <span class="link">View Classes →</span>
+      </a>
+      <a class="card" style="background:#FFDFF0;" href="https://www.artbeatstudio.co/camps">
+        <h3>Camps</h3>
+        <p>Spring, Summer, and Winter Camps for kids ages 6+. Each week offers new themes, creative projects, and plenty of clay fun.</p>
+        <span class="link">Explore Camps →</span>
+      </a>
+      <a class="card" style="background:#DFF6FF;" href="https://www.artbeatstudio.co/parties-and-events">
+        <h3>Parties & Events</h3>
+        <p>Celebrate birthdays, team-building, and special occasions with guided clay, painting, or pottery wheel activities — everything included.</p>
+        <span class="link">Book Your Event →</span>
+      </a>
+      <a class="card" style="background:#E8E6FF;" href="https://www.artbeatstudio.co/workshops">
+        <h3>Workshops</h3>
+        <p>One-day creative experiences like Resin Art, Clay Gingerbread Houses, and Paint & Sip nights. Perfect for adults and teens.</p>
+        <span class="link">See Upcoming Workshops →</span>
+      </a>
+      <a class="card" style="background:#FFEED1;" href="https://www.artbeatstudio.co/open-studio">
+        <h3>Open Studio</h3>
+        <p>Drop in and work at your own pace with full access to our studio tools and materials. Great for returning students and hobbyists.</p>
+        <span class="link">Join Open Studio →</span>
+      </a>
+      <a class="card" style="background:#E3F8E0;" href="https://www.artbeatstudio.co/private-lessons">
+        <h3>Private Lessons</h3>
+        <p>Tailored one-on-one or small-group lessons in pottery, painting, or mixed media — designed around your interests and goals.</p>
+        <span class="link">Book a Private Lesson →</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
