@@ -21,11 +21,36 @@
       color: #1A1A1A;
       min-height: 100vh;
     }
+
+    /* Responsive header */
+    @media (max-width: 768px) {
+      .header-title {
+        font-size: 2rem !important;
+      }
+      .header-subtitle {
+        font-size: 1rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-title {
+        font-size: 1.6rem !important;
+      }
+      .header-subtitle {
+        font-size: 0.95rem !important;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div id="offerings-grid" style="max-width:1200px;margin:60px auto;padding:20px;font-family:'Poppins',sans-serif;color:#1A1A1A;background:#FFFFFF;">
+  <!-- Header Section -->
+  <div style="max-width:1200px;margin:40px auto 20px;padding:20px;text-align:center;font-family:'Poppins',sans-serif;">
+    <h1 class="header-title" style="font-size:2.5rem;font-weight:700;color:#1A1A1A;margin-bottom:12px;">Art Beat Studio</h1>
+    <p class="header-subtitle" style="font-size:1.15rem;color:#666;line-height:1.6;">Explore our creative art and pottery programs for all ages</p>
+  </div>
+
+  <div id="offerings-grid" style="max-width:1200px;margin:20px auto 60px;padding:20px;font-family:'Poppins',sans-serif;color:#1A1A1A;background:#FFFFFF;">
     <style>
       #offerings-grid .grid {
         display:grid;
