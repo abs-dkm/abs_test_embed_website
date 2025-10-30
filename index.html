@@ -65,6 +65,27 @@
       color: #FFFFFF;
     }
 
+    .nav-link {
+      padding: 12px 32px;
+      border: none;
+      background: transparent;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #666;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .nav-link:hover {
+      background: #F5F5F5;
+      color: #1A1A1A;
+    }
+
     /* Tab Content */
     .tab-content {
       display: none;
@@ -237,6 +258,9 @@
       <button class="nav-tab" data-tab="camps">Camps</button>
       <button class="nav-tab" data-tab="classes">Classes</button>
       <button class="nav-tab" data-tab="workshops">Workshops</button>
+      <button class="nav-tab" data-tab="newsletters">MailChimp Newsletters</button>
+      <a href="test-homepage.html" class="nav-link">Test Homepage</a>
+      <a href="temp-camps.html" class="nav-link">Test Camps</a>
     </div>
   </div>
 
@@ -459,13 +483,116 @@
 
   <!-- Classes Tab -->
   <div id="classes" class="tab-content">
-    <div class="placeholder-content">
-      <h2>Classes</h2>
-      <p>Our regular classes section - content coming soon!</p>
-      <div class="placeholder-grid">
-        <div class="placeholder-card">Art Classes Placeholder</div>
-        <div class="placeholder-card">Pottery Classes Placeholder</div>
-        <div class="placeholder-card">Youth Classes Placeholder</div>
+    <div style="max-width: 1100px; margin: 50px auto; padding: 20px;">
+      <div style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 12px;">Classes</h2>
+        <p style="font-size: 1.1rem; font-weight: 300; color: #666;">Explore our regular class offerings for all ages and schedules</p>
+      </div>
+
+      <style>
+        .class-type-card {
+          background: var(--card-bg, #E9F7F6);
+          border-radius: 28px;
+          padding: 40px 32px;
+          box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .class-type-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+        }
+        .class-type-card h3 {
+          font-size: 1.6rem;
+          font-weight: 400;
+          margin-bottom: 12px;
+          color: #1A1A1A;
+        }
+        .class-type-card p {
+          font-size: 1rem;
+          font-weight: 300;
+          opacity: 0.85;
+          line-height: 1.6;
+          margin-bottom: 20px;
+        }
+        .format-buttons {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+        .format-btn {
+          padding: 10px 20px;
+          background: rgba(0,0,0,0.08);
+          border: none;
+          border-radius: 10px;
+          font-family: 'Fredoka', sans-serif;
+          font-size: 0.85rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: #1A1A1A;
+          text-decoration: none;
+          cursor: pointer;
+          transition: background 0.2s ease;
+          display: inline-block;
+        }
+        .format-btn:hover {
+          background: rgba(0,0,0,0.15);
+        }
+        .format-btn.simple {
+          background: rgba(100, 150, 255, 0.12);
+        }
+        .format-btn.simple:hover {
+          background: rgba(100, 150, 255, 0.2);
+        }
+        .format-btn.camps {
+          background: rgba(255, 100, 150, 0.12);
+        }
+        .format-btn.camps:hover {
+          background: rgba(255, 100, 150, 0.2);
+        }
+      </style>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 40px;">
+
+        <!-- Toddler & Preschool -->
+        <div class="class-type-card" style="--card-bg: #E9F7F6;">
+          <h3>Tiny Tot & Toddler</h3>
+          <p>Age-appropriate art experiences for our youngest artists (ages 1-5). Fun, messy, and educational.</p>
+          <div class="format-buttons">
+            <a href="toddler-preschool-simple.html" class="format-btn simple">📋 Simple View</a>
+            <a href="toddler-preschool-camps.html" class="format-btn camps">🎨 Grouped View</a>
+          </div>
+        </div>
+
+        <!-- Homeschool & Daytime -->
+        <div class="class-type-card" style="--card-bg: #FDE4E8;">
+          <h3>Homeschool & Daytime</h3>
+          <p>Daytime classes designed for homeschool families and flexible schedules. Structured learning and creative exploration.</p>
+          <div class="format-buttons">
+            <a href="homeschool-daytime-simple.html" class="format-btn simple">📋 Simple View</a>
+            <a href="homeschool-daytime-camps.html" class="format-btn camps">🎨 Grouped View</a>
+          </div>
+        </div>
+
+        <!-- Adult Classes -->
+        <div class="class-type-card" style="--card-bg: #EDE8FF;">
+          <h3>Adult Classes</h3>
+          <p>Creative workshops and classes for adults. Learn new skills or refine existing ones in a relaxed environment.</p>
+          <div class="format-buttons">
+            <a href="adult-classes-simple.html" class="format-btn simple">📋 Simple View</a>
+            <a href="adult-classes-camps.html" class="format-btn camps">🎨 Grouped View</a>
+          </div>
+        </div>
+
+        <!-- After School -->
+        <div class="class-type-card" style="--card-bg: #FFF2C5;">
+          <h3>After School</h3>
+          <p>Creative programs perfect for kids after their school day ends. Build skills and make friends through art.</p>
+          <div class="format-buttons">
+            <a href="after-school-simple.html" class="format-btn simple">📋 Simple View</a>
+            <a href="after-school-camps.html" class="format-btn camps">🎨 Grouped View</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -479,6 +606,53 @@
         <div class="placeholder-card">Adult Workshops Placeholder</div>
         <div class="placeholder-card">Special Events Placeholder</div>
         <div class="placeholder-card">Private Sessions Placeholder</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletters Tab -->
+  <div id="newsletters" class="tab-content">
+    <div style="max-width: 1100px; margin: 50px auto; padding: 20px;">
+      <div style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 12px;">MailChimp Newsletters</h2>
+        <p style="font-size: 1.1rem; font-weight: 300; color: #666;">Browse our past newsletters and announcements</p>
+      </div>
+
+      <style>
+        .newsletter-card {
+          background: #ffffff;
+          border-radius: 20px;
+          padding: 32px 28px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          text-decoration: none;
+          color: #1A1A1A;
+          display: block;
+          margin-bottom: 20px;
+        }
+        .newsletter-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .newsletter-card h3 {
+          font-size: 1.4rem;
+          font-weight: 400;
+          margin-bottom: 8px;
+          color: #1A1A1A;
+        }
+        .newsletter-card p {
+          font-size: 1rem;
+          font-weight: 300;
+          color: #666;
+          margin: 0;
+        }
+      </style>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+        <a href="mockup-newsletter.html" class="newsletter-card">
+          <h3>📧 October 29, 2025</h3>
+          <p>Holiday Camps and Workshops - Featuring Santa Cookie Plates, Christmas Tree Workshop, Resin Art & more!</p>
+        </a>
       </div>
     </div>
   </div>

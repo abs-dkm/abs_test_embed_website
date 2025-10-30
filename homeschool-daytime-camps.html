@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homeschool & Daytime Classes - Art Beat Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="classes-grid" style="max-width:1100px;margin:50px auto;padding:20px;font-family:'Fredoka',sans-serif;color:#1A1A1A;background:#FFFFFF;">
+    <style>
+      #classes-grid .grid {
+        display:grid;
+        gap:28px;
+        grid-template-columns:repeat(2, 1fr);
+        align-items:stretch;
+        justify-content:center;
+      }
+      #classes-grid .card {
+        border-radius:28px;
+        padding:48px 36px;
+        background:var(--card-bg,#FDE4E8);
+        box-shadow:0 6px 20px rgba(0,0,0,.08);
+        color:#1A1A1A;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:flex-start;
+        min-height:220px;
+        transition:transform .15s ease, box-shadow .15s ease;
+      }
+      #classes-grid .card:hover {
+        transform:translateY(-4px);
+        box-shadow:0 10px 28px rgba(0,0,0,.12);
+      }
+      #classes-grid .title { font-size:1.4rem; font-weight:400; margin-bottom:10px; }
+      #classes-grid .dates { font-size:1.05rem; font-weight:300; opacity:.9; margin-bottom:4px; }
+      #classes-grid .day-card { display:flex; flex-direction:column; gap:16px; width:100%; }
+      #classes-grid .sub-classes { display:grid; grid-template-columns:1fr; gap:12px; }
+      #classes-grid .sub-class-box {
+        background:rgba(255,255,255,0.6);
+        padding:16px 20px; border-radius:16px;
+        display:flex; flex-direction:column; gap:8px;
+      }
+      #classes-grid .sub-class-title { font-size:1rem; font-weight:400; margin-bottom:4px; }
+      #classes-grid .class-info {
+        font-size:0.85rem; font-weight:300; opacity:0.85; line-height:1.6;
+        display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+      }
+      #classes-grid .book-btn {
+        background:rgba(0,0,0,0.1);
+        padding:4px 12px; border-radius:6px;
+        font-size:0.75rem; font-weight:600; text-transform:uppercase;
+        transition:background .2s ease; white-space:nowrap;
+        text-decoration:none; color:#1A1A1A;
+      }
+      #classes-grid .book-btn:hover { background:rgba(0,0,0,0.15); }
+
+      /* Pastel rotation */
+      #classes-grid .card:nth-child(1){--card-bg:#FDE4E8;} /* blush */
+      #classes-grid .card:nth-child(2){--card-bg:#E9F7F6;} /* mint */
+      #classes-grid .card:nth-child(3){--card-bg:#FFF2C5;} /* butter */
+      #classes-grid .card:nth-child(4){--card-bg:#EDE8FF;} /* lilac */
+
+      @media(max-width:750px){
+        #classes-grid .grid { grid-template-columns:1fr; }
+        #classes-grid .card { min-height:180px; padding:32px 24px; }
+        #classes-grid .title { font-size:1.25rem; }
+        #classes-grid .dates { font-size:0.95rem; }
+      }
+      @media(max-width:480px){
+        #classes-grid { padding:15px; }
+        #classes-grid .card { padding:24px 20px; }
+        #classes-grid .title { font-size:1.15rem; }
+        #classes-grid .dates { font-size:0.9rem; }
+      }
+    </style>
+
+    <div class="grid">
+
+      <!-- Monday Classes -->
+      <div class="card" data-start="2025-12-01">
+        <h4 class="title">Monday Classes</h4>
+        <p class="dates">Dec 1, 2025 – Jan 2, 2026</p>
+        <div class="sub-classes">
+          <div class="sub-class-box">
+            <div class="sub-class-title">Homeschool Sketching & Art</div>
+            <div class="class-info">
+              <span>11:00 AM – 12:30 PM | Ages 7–15 | 1.5 hrs</span>
+              <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1410098">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thursday Classes -->
+      <div class="card" data-start="2025-12-04">
+        <div class="day-card">
+          <div>
+            <h4 class="title">Thursday Classes</h4>
+            <p class="dates">Dec 4, 2025 – Jan 2, 2026</p>
+          </div>
+          <div class="sub-classes">
+            <div class="sub-class-box">
+              <div class="sub-class-title">Homeschool Mixed Media</div>
+              <div class="class-info">
+                <span>11:00 AM – 12:30 PM | Ages 6–13 | 1.5 hrs</span>
+                <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1410150">Book</a>
+              </div>
+            </div>
+            <div class="sub-class-box">
+              <div class="sub-class-title">Homeschool Youth Potters Wheel</div>
+              <div class="class-info">
+                <span>11:00 AM – 1:00 PM | Ages 7–17 | 2 hrs</span>
+                <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1410151">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Friday Classes -->
+      <div class="card" data-start="2025-12-05">
+        <div class="day-card">
+          <div>
+            <h4 class="title">Friday Classes</h4>
+            <p class="dates">Dec 5, 2025 – Jan 2, 2026*</p>
+          </div>
+          <div class="sub-classes">
+            <div class="sub-class-box">
+              <div class="sub-class-title">Homeschool Mixed Media</div>
+              <div class="class-info">
+                <span>11:00 AM – 12:30 PM | Ages 6–13 | 1.5 hrs</span>
+                <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1410153">Book</a>
+              </div>
+            </div>
+            <div class="sub-class-box">
+              <div class="sub-class-title">Homeschool Youth Potters Wheel</div>
+              <div class="class-info">
+                <span>11:00 AM – 1:00 PM | Ages 7–17 | 2 hrs<br><small>*Runs through Jan 23, 2026</small></span>
+                <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1410154">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      // Auto-sort chronologically
+      (function(){
+        const grid = document.querySelector('#classes-grid .grid');
+        const cards = [...grid.children];
+        cards.sort((a,b)=> new Date(a.dataset.start) - new Date(b.dataset.start));
+        cards.forEach(c=> grid.appendChild(c));
+      })();
+    </script>
+  </div>
+
+</body>
+</html>
