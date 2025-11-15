@@ -284,7 +284,7 @@
 
       <div class="home-card" data-tab="workshops">
         <h2>Workshops</h2>
-        <p>Special workshops and one-time events. Learn new techniques and create unique projects with expert guidance.</p>
+        <p>Holiday specials, resin art, pottery sessions, and unique creative experiences! Join us for festive workshops including Santa visits, handmade cards with Rachel Wadlow, and try-it pottery sessions.</p>
       </div>
     </div>
   </div>
@@ -639,14 +639,301 @@
 
   <!-- Workshops Tab -->
   <div id="workshops" class="tab-content">
-    <div class="placeholder-content">
-      <h2>Workshops</h2>
-      <p>Special workshops and events - content coming soon!</p>
-      <div class="placeholder-grid">
-        <div class="placeholder-card">Adult Workshops Placeholder</div>
-        <div class="placeholder-card">Special Events Placeholder</div>
-        <div class="placeholder-card">Private Sessions Placeholder</div>
+    <div id="workshops-grid" style="max-width:1100px;margin:50px auto;padding:20px;font-family:'Fredoka',sans-serif;color:#1A1A1A;">
+      <style>
+        #workshops-grid .section-header {
+          font-size: 1.8rem;
+          font-weight: 400;
+          margin: 0 0 24px 0;
+          color: #1A1A1A;
+          padding-bottom: 12px;
+          border-bottom: 2px solid #F0F0F0;
+        }
+        #workshops-grid .two-column-layout {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+          margin-bottom: 40px;
+        }
+        #workshops-grid .grid {
+          display:grid;
+          gap:28px;
+          grid-template-columns:repeat(2, 1fr);
+        }
+        #workshops-grid .workshop-card {
+          border-radius:28px;
+          padding:36px 28px;
+          background:var(--card-bg,#FFF2C5);
+          box-shadow:0 6px 20px rgba(0,0,0,.08);
+          color:#1A1A1A;
+          display:flex;
+          flex-direction:column;
+          justify-content:space-between;
+          min-height:320px;
+          transition:transform .15s ease, box-shadow .15s ease;
+        }
+        #workshops-grid .workshop-card:hover {
+          transform:translateY(-4px);
+          box-shadow:0 10px 28px rgba(0,0,0,.12);
+        }
+        #workshops-grid .workshop-title {
+          font-size:1.3rem;
+          font-weight:400;
+          margin-bottom:12px;
+          line-height: 1.3;
+        }
+        #workshops-grid .workshop-meta {
+          font-size:0.95rem;
+          font-weight:300;
+          opacity:.85;
+          margin-bottom:16px;
+        }
+        #workshops-grid .workshop-meta div {
+          margin-bottom: 6px;
+        }
+        #workshops-grid .workshop-description {
+          font-size:0.95rem;
+          font-weight:300;
+          line-height:1.6;
+          opacity:.9;
+          margin-bottom:20px;
+          flex-grow: 1;
+        }
+        #workshops-grid .workshop-instructor {
+          font-size:0.85rem;
+          font-weight:400;
+          opacity:.75;
+          margin-bottom:16px;
+          font-style: italic;
+        }
+        #workshops-grid .booking-section {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        #workshops-grid .book-btn {
+          background:rgba(0,0,0,0.12);
+          padding:12px 20px;
+          border-radius:12px;
+          font-size:0.85rem;
+          font-weight:600;
+          text-transform:uppercase;
+          transition:background .2s ease;
+          text-decoration:none;
+          color:#1A1A1A;
+          text-align: center;
+          display: block;
+        }
+        #workshops-grid .book-btn:hover {
+          background:rgba(0,0,0,0.2);
+        }
+        #workshops-grid .book-btn.small {
+          padding: 8px 16px;
+          font-size: 0.75rem;
+        }
+
+        /* Holiday section colors */
+        #workshops-grid .holiday-section .workshop-card:nth-child(4n+1) { --card-bg: #FDE4E8; } /* blush */
+        #workshops-grid .holiday-section .workshop-card:nth-child(4n+2) { --card-bg: #FFF2C5; } /* butter */
+        #workshops-grid .holiday-section .workshop-card:nth-child(4n+3) { --card-bg: #E9F7F6; } /* mint */
+        #workshops-grid .holiday-section .workshop-card:nth-child(4n+4) { --card-bg: #EDE8FF; } /* lilac */
+
+        /* Potter featured section */
+        #workshops-grid .potter-featured {
+          background: linear-gradient(135deg, #E9F7F6 0%, #E8F5E9 100%);
+          border-radius: 28px;
+          padding: 36px 28px;
+          box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        #workshops-grid .potter-featured h4 {
+          font-size: 1.5rem !important;
+          font-weight: 400 !important;
+          margin-bottom: 12px !important;
+        }
+        #workshops-grid .potter-featured p {
+          font-size: 0.95rem !important;
+          margin-bottom: 20px !important;
+        }
+        #workshops-grid .potter-featured > div > div {
+          font-size: 0.9rem !important;
+          margin-bottom: 16px !important;
+        }
+        #workshops-grid .potter-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+        }
+        #workshops-grid .potter-grid .book-btn {
+          background: rgba(0,0,0,0.12);
+          color: #1A1A1A;
+          padding: 10px 14px;
+          font-size: 0.75rem;
+        }
+        #workshops-grid .potter-grid .book-btn:hover {
+          background: rgba(0,0,0,0.2);
+        }
+        @media(max-width:1000px){
+          #workshops-grid .potter-grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+          #workshops-grid .potter-grid .book-btn {
+            padding: 14px 20px;
+            font-size: 0.85rem;
+          }
+        }
+        @media(max-width:900px){
+          #workshops-grid .potter-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media(max-width:650px){
+          #workshops-grid .potter-featured {
+            padding: 32px 24px;
+          }
+          #workshops-grid .potter-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media(max-width:1000px){
+          #workshops-grid .two-column-layout {
+            grid-template-columns: 1fr;
+            gap: 40px;
+          }
+        }
+        @media(max-width:650px){
+          #workshops-grid .grid {
+            grid-template-columns:1fr;
+          }
+          #workshops-grid .workshop-card {
+            min-height:280px;
+            padding:28px 24px;
+          }
+          #workshops-grid .section-header {
+            font-size: 1.5rem;
+          }
+        }
+        @media(max-width:480px){
+          #workshops-grid {
+            padding:15px;
+          }
+          #workshops-grid .workshop-card {
+            padding:24px 20px;
+          }
+          #workshops-grid .workshop-title {
+            font-size:1.2rem;
+          }
+        }
+      </style>
+
+      <div class="two-column-layout">
+
+        <!-- Holiday Workshops Section -->
+        <div>
+          <h3 class="section-header">Holiday Workshops</h3>
+          <div class="grid holiday-section">
+
+        <!-- Clay Christmas Tree Workshop -->
+        <div class="workshop-card">
+          <div>
+            <h4 class="workshop-title">Clay Christmas Tree Workshop</h4>
+            <div class="workshop-meta">
+              <div><strong>Ages:</strong> 6–18+</div>
+              <div><strong>Day 1:</strong> Sat, Nov 22 (11 AM – 2 PM)</div>
+              <div><strong>Day 2:</strong> Sat, Dec 6 (11 AM – 2 PM)</div>
+            </div>
+            <p class="workshop-description">
+              Create your own handmade clay Christmas tree in this 2-part workshop! Build your tree on day one, then return to glaze and add the finishing touches.
+            </p>
+          </div>
+          <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1624332?source=camps">Book 2-Part Workshop</a>
+        </div>
+
+        <!-- Holiday Cards with Rachel -->
+        <div class="workshop-card">
+          <div>
+            <h4 class="workshop-title">Holiday Cards & Gift Tags with Rachel Wadlow</h4>
+            <div class="workshop-meta">
+              <div><strong>Date:</strong> Monday, Nov 24, 2025</div>
+              <div><strong>Time:</strong> 6:30 PM – 8:30 PM PST</div>
+              <div><strong>Ages:</strong> All ages welcome</div>
+            </div>
+            <p class="workshop-description">
+              Create hand-painted holiday cards and gift tags in two design styles: Abstract and Geometric. Learn color theory and surface design while enjoying charcuterie as your paint dries.
+            </p>
+            <div class="workshop-instructor">Instagram: @rachelwadlowstudio</div>
+          </div>
+          <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1700056?source=camps">Book Now</a>
+        </div>
+
+        <!-- Resin Workshop with PunkyPower -->
+        <div class="workshop-card">
+          <div>
+            <h4 class="workshop-title">Resin Workshop with PunkyPower</h4>
+            <div class="workshop-meta">
+              <div><strong>Session 1:</strong> Fri, Nov 14 (6:30–8:30 PM)</div>
+              <div><strong>Session 2:</strong> Sat, Nov 22 (5:00–6:30 PM)</div>
+            </div>
+            <p class="workshop-description">
+              Learn to work with resin and create beautiful trays, bud vases, or coaster sets. Perfect for beginners and experienced crafters alike!
+            </p>
+            <div class="workshop-instructor">Instagram: @punkypowerproductions</div>
+          </div>
+          <div class="booking-section">
+            <a class="book-btn small" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1683567">Fri, Nov 14</a>
+            <a class="book-btn small" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1683568">Sat, Nov 22</a>
+          </div>
+        </div>
+
+        <!-- Art and Cookies with Santa -->
+        <div class="workshop-card">
+          <div>
+            <h4 class="workshop-title">Art and Cookies with Santa</h4>
+            <div class="workshop-meta">
+              <div><strong>Date:</strong> Sunday, Dec 7, 2025</div>
+              <div><strong>Time:</strong> 1:30 PM – 3:30 PM</div>
+              <div><strong>Ages:</strong> 5–18+ | <strong>Capacity:</strong> 40</div>
+            </div>
+            <p class="workshop-description">
+              Paint ornaments, meet Santa, decorate a picture frame, and create a snowglobe! A magical holiday experience complete with cookies and festive fun.
+            </p>
+          </div>
+          <div class="booking-section">
+            <a class="book-btn small" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1639277?source=camps">Session 1</a>
+            <a class="book-btn small" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1639278?source=camps">Session 2</a>
+          </div>
+        </div>
+
+          </div>
+        </div>
+
+        <!-- Potter Experiences Section -->
+        <div>
+          <h3 class="section-header">Potter Experiences</h3>
+          <div class="potter-featured">
+            <h4>Weekly Try-It Potter Sessions</h4>
+            <div>
+              <div><strong>Days:</strong> Thursday & Friday Evenings</div>
+              <div><strong>Time:</strong> 6:00 PM – 8:00 PM</div>
+              <div><strong>November & December Sessions Available</strong></div>
+            </div>
+            <p>
+              Experience the potter's wheel in these weekly evening sessions! Perfect for trying pottery for the first time or honing your skills. Advance signup required.
+            </p>
+            <div class="potter-grid">
+              <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1680179">Thu, Nov 20</a>
+              <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1680180">Fri, Nov 21</a>
+              <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1680182">Fri, Nov 28</a>
+              <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1680183">Thu, Dec 4</a>
+              <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1680184">Fri, Dec 5</a>
+              <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1680185">Thu, Dec 11</a>
+              <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/marketplace/activity-set/1680186">Fri, Dec 12</a>
+            </div>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </div>
 
