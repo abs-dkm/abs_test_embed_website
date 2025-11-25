@@ -36,43 +36,62 @@
       }
       #classes-grid .card {
         border-radius:28px;
-        padding:48px 36px;
+        padding:36px 32px;
         background:var(--card-bg,#FFF2C5);
         box-shadow:0 6px 20px rgba(0,0,0,.08);
         color:#1A1A1A;
         display:flex;
         flex-direction:column;
-        justify-content:center;
-        align-items:flex-start;
-        min-height:220px;
         transition:transform .15s ease, box-shadow .15s ease;
       }
       #classes-grid .card:hover {
         transform:translateY(-4px);
         box-shadow:0 10px 28px rgba(0,0,0,.12);
       }
-      #classes-grid .title { font-size:1.4rem; font-weight:400; margin-bottom:10px; }
-      #classes-grid .dates { font-size:1.05rem; font-weight:300; opacity:.9; margin-bottom:4px; }
-      #classes-grid .day-card { display:flex; flex-direction:column; gap:16px; width:100%; }
-      #classes-grid .sub-classes { display:grid; grid-template-columns:1fr; gap:12px; }
-      #classes-grid .sub-class-box {
-        background:rgba(255,255,255,0.6);
-        padding:16px 20px; border-radius:16px;
-        display:flex; flex-direction:column; gap:8px;
+      #classes-grid .title { font-size:1.4rem; font-weight:400; margin-bottom:6px; }
+      #classes-grid .dates { font-size:0.9rem; font-weight:300; opacity:.85; margin-bottom:20px; }
+      #classes-grid .class-list-dec {
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
       }
-      #classes-grid .sub-class-title { font-size:1rem; font-weight:400; margin-bottom:4px; }
-      #classes-grid .class-info {
-        font-size:0.85rem; font-weight:300; opacity:0.85; line-height:1.6;
-        display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+      #classes-grid .class-item-dec {
+        background:rgba(255,255,255,0.65);
+        padding:14px 18px;
+        border-radius:12px;
       }
-      #classes-grid .book-btn {
+      #classes-grid .class-item-dec .class-name-dec {
+        font-size:0.95rem;
+        font-weight:600;
+        margin-bottom:6px;
+        color:#1A1A1A;
+      }
+      #classes-grid .class-item-dec .class-details-dec {
+        font-size:0.8rem;
+        font-weight:300;
+        opacity:0.8;
+        margin-bottom:0;
+        line-height:1.5;
+        display:flex;
+        gap:6px;
+        flex-wrap:wrap;
+        align-items:center;
+      }
+      #classes-grid .class-item-dec .book-link-dec {
         background:rgba(0,0,0,0.1);
-        padding:4px 12px; border-radius:6px;
-        font-size:0.75rem; font-weight:600; text-transform:uppercase;
-        transition:background .2s ease; white-space:nowrap;
-        text-decoration:none; color:#1A1A1A;
+        padding:6px 14px;
+        border-radius:8px;
+        font-size:0.75rem;
+        font-weight:600;
+        text-transform:uppercase;
+        transition:background .2s ease;
+        text-decoration:none;
+        color:#1A1A1A;
+        display:inline-block;
       }
-      #classes-grid .book-btn:hover { background:rgba(0,0,0,0.15); }
+      #classes-grid .class-item-dec .book-link-dec:hover {
+        background:rgba(0,0,0,0.18);
+      }
 
       /* Pastel rotation */
       #classes-grid .card:nth-child(1){--card-bg:#FFF2C5;} /* butter */
@@ -95,81 +114,111 @@
       }
     </style>
 
+    <h3 style="font-size:1.6rem; font-weight:400; margin:0 0 20px 0; color:#1A1A1A;">After-School & Evening Classes</h3>
+    <p style="font-size:0.95rem; font-weight:300; opacity:0.8; margin-bottom:30px;">Jan 26 - Mar 6, 2026</p>
+
     <div class="grid">
 
-      <!-- Monday Classes - Dec/Jan Semester -->
-      <div class="card" data-start="2025-12-01">
-        <div class="day-card">
-          <div>
-            <h4 class="title">Monday Classes (Dec-Jan)</h4>
-            <p class="dates">Dec 1, 2025 – Jan 12, 2026</p>
-          </div>
-          <div class="sub-classes">
-            <div class="sub-class-box">
-              <div class="sub-class-title">Beginners Youth Drawing Class</div>
-              <div class="class-info">
-                <span>Mondays, 3:30 PM – 5:00 PM | Ages 6–8 | 1.5 hrs</span>
-                <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1682057?source=semesters">Book</a>
-              </div>
-            </div>
-            <div class="sub-class-box">
-              <div class="sub-class-title">Beginners Potter's Wheel Class</div>
-              <div class="class-info">
-                <span>Mondays, 4:00 PM – 6:00 PM | Ages 8–11 | 2 hrs</span>
-                <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1410141?source=semesters">Book</a>
-              </div>
-            </div>
-            <div class="sub-class-box">
-              <div class="sub-class-title">Teen Potters Wheel</div>
-              <div class="class-info">
-                <span>Mondays, 6:30 PM – 8:30 PM | Ages 13–17 | 2 hrs</span>
-                <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1410143?source=semesters">Book</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tuesday Classes - Dec/Jan Semester -->
-      <div class="card" data-start="2025-12-02">
-        <div class="day-card">
-          <div>
-            <h4 class="title">Tuesday Classes (Dec-Jan)</h4>
-            <p class="dates">Dec 2, 2025 – Jan 20, 2026</p>
-          </div>
-          <div class="sub-classes">
-            <div class="sub-class-box">
-              <div class="sub-class-title">Mixed Media & Clay FUN!</div>
-              <div class="class-info">
-                <span>Tuesdays, 3:30 PM – 4:30 PM | Ages 6–12 | 1 hr</span>
-                <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1410148?source=semesters">Book</a>
-              </div>
-            </div>
-            <div class="sub-class-box">
-              <div class="sub-class-title">Youth & Teen Potter's Wheel</div>
-              <div class="class-info">
-                <span>Tuesdays, 4:00 PM – 6:00 PM | Ages 10–15 | 2 hrs</span>
-                <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1410149?source=semesters">Book</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Monday Classes - Jan/Feb/Mar Semester -->
+      <!-- Youth Drawing & Acrylics -->
       <div class="card" data-start="2026-01-26">
-        <div class="day-card">
-          <div>
-            <h4 class="title">Monday Classes (Jan-Mar)</h4>
-            <p class="dates">Jan 26, 2026 – Mar 2, 2026</p>
+        <h4 class="title">Youth Drawing & Acrylics</h4>
+        <p class="dates">Ages 6–17 | $250</p>
+        <div class="class-list-dec">
+          <div class="class-item-dec">
+            <div class="class-name-dec">2:00 PM – 3:30 PM | Jan 28 – Mar 4, 2026</div>
+            <div class="class-details-dec">
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1662455">Wed</a>
+            </div>
           </div>
-          <div class="sub-classes">
-            <div class="sub-class-box">
-              <div class="sub-class-title">Art Exploration</div>
-              <div class="class-info">
-                <span>Mondays, 3:30 PM – 4:30 PM | Ages 5–12 | 1 hr</span>
-                <a class="book-btn" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670586?source=semesters">Book</a>
-              </div>
+          <div class="class-item-dec">
+            <div class="class-name-dec">3:30 PM – 5:00 PM | Jan 26 – Mar 6, 2026</div>
+            <div class="class-details-dec">
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1662453">Mon</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1662454">Tue</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1662456">Thu</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1662457">Fri</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Art Exploration -->
+      <div class="card" data-start="2026-01-26">
+        <h4 class="title">Art Exploration</h4>
+        <p class="dates">Ages 5–12 | $250</p>
+        <div class="class-list-dec">
+          <div class="class-item-dec">
+            <div class="class-name-dec">3:30 PM – 4:30 PM | Jan 26 – Mar 6, 2026</div>
+            <div class="class-details-dec">
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670586">Mon</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670587">Tue</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670591">Wed</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670588">Thu</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670590">Fri</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beginner's Youth Potter's Wheel -->
+      <div class="card" data-start="2026-01-26">
+        <h4 class="title">Beginner's Youth Potter's Wheel</h4>
+        <p class="dates">Ages 8–17 | $315</p>
+        <div class="class-list-dec">
+          <div class="class-item-dec">
+            <div class="class-name-dec">2:00 PM – 4:00 PM | Jan 28 – Mar 4, 2026</div>
+            <div class="class-details-dec">
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670416">Wed</a>
+            </div>
+          </div>
+          <div class="class-item-dec">
+            <div class="class-name-dec">3:30 PM – 5:30 PM | Jan 26 – Mar 2, 2026</div>
+            <div class="class-details-dec">
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670382">Mon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intermediate Youth Potter's Wheel -->
+      <div class="card" data-start="2026-01-26">
+        <h4 class="title">Intermediate Youth Potter's Wheel</h4>
+        <p class="dates">Ages 8–18+ | $315</p>
+        <div class="class-list-dec">
+          <div class="class-item-dec">
+            <div class="class-name-dec">3:30 PM – 5:30 PM | Jan 27 – Mar 5, 2026</div>
+            <div class="class-details-dec">
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670450">Tue</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670451">Thu</a>
+            </div>
+          </div>
+          <div class="class-item-dec">
+            <div class="class-name-dec">4:30 PM – 6:00 PM | Jan 28 – Mar 4, 2026</div>
+            <div class="class-details-dec">
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1670485">Wed</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pottery, Clay Play & Paint -->
+      <div class="card" data-start="2026-01-26">
+        <h4 class="title">Pottery, Clay Play & Paint</h4>
+        <p class="dates">Ages 6–12 | $250</p>
+        <div class="class-list-dec">
+          <div class="class-item-dec">
+            <div class="class-name-dec">3:30 PM – 4:30 PM | Jan 28 – Mar 4, 2026</div>
+            <div class="class-details-dec">
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1665600">Wed</a>
+            </div>
+          </div>
+          <div class="class-item-dec">
+            <div class="class-name-dec">5:00 PM – 6:00 PM | Jan 26 – Mar 6, 2026</div>
+            <div class="class-details-dec">
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1662812">Mon</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1665597">Tue</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1665598">Thu</a>
+              <a class="book-link-dec" target="_blank" rel="noopener" href="https://www.hisawyer.com/the-art-beat/schedules/activity-set/1665599">Fri</a>
             </div>
           </div>
         </div>
